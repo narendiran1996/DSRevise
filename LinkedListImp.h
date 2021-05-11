@@ -12,11 +12,9 @@ struct NodeLL
 template <typename T>
 class SingleLinkedList
 {
-private:
+public:
     NodeLL<T> *head;
     int LLsize;
-
-public:
     SingleLinkedList()
     {
         this->head = NULL;

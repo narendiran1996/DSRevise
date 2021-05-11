@@ -45,7 +45,7 @@ public:
         {
             std::cout << "\n****ERROR****\n-----------UNDERFLOW-----------\n";
             this->StackSize = 0;
-            return -9999;
+            return NULL;
         }
         NodeStack<T> *ptr = this->top;
 
@@ -60,6 +60,13 @@ public:
     T getTop()
     {
         return (this->top)->data;
+    }
+    int isEmpty()
+    {
+        if (this->top == NULL)
+            return 1;
+        else
+            return 0;
     }
 
     void DisplayStack()
